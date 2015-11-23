@@ -80,6 +80,7 @@ class PostgresResultIterator implements Iterator, Countable {
                         break;
 
                     case 'json':
+                    case 'jsonb':
                         // This converts all JSON objects to be associative arrays
                         $value = json_decode($value, true);
                         break;
